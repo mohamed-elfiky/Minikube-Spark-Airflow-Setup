@@ -1,0 +1,32 @@
+mode: standalone
+replicas: 1
+rootUser: admin
+rootPassword: admin123
+persistence:
+  size: 50Gi
+  enabled: true
+resources:
+  requests:
+    memory: 512M
+
+service:
+  type: NodePort
+  clusterIP: ~
+  port: "9000"
+  nodePort: 32000
+
+consoleService:
+  type: NodePort
+  clusterIP: ~
+  port: "9001"
+  nodePort: 32001
+
+buckets:
+  - name: deepstorage
+    policy: none
+    purge: false
+    versioning: false
+    objectlocking: false
+
+environment:
+  MINIO_SITE_REGION: "eu-west-1"
