@@ -1,4 +1,4 @@
-# Airflow Based Spark Jobs On K&S
+# Airflow Based Spark Jobs On K8S
 
 ## Introduction
 - The inention behind this repository is to provide a clear way to setup a development evnironment
